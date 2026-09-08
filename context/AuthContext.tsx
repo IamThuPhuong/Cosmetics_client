@@ -2,14 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { User, LoginRequest, RegisterRequest } from "@/types/auth";
-// [Mock Phase 1: Pure UI Template]
-const authService = {
-  login: async (req: any) => ({ token: "mock-token", username: req.username, role: "ROLE_USER" }),
-  getCurrentUser: async () => null,
-  register: async (req: any) => ({}),
-  logout: async () => {},
-};
-
+import { authService } from "@/services/auth.service";
 
 interface AuthContextType {
   user: User | null;

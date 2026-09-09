@@ -3,12 +3,7 @@
 import { useEffect, useState, use } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-// [Mock Phase 1: Pure UI Template]
-const productService = {
-  getProductById: async (id: any) => null,
-  getRelatedProducts: async (id: any) => [],
-};
-
+import { productService } from "@/services/product.service";
 import { useCart } from "@/context/CartContext";
 import { ProductResponse, ProductVariantResponse } from "@/types/product";
 import { formatVND } from "@/lib/utils";

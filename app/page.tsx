@@ -6,14 +6,7 @@ import BrandBar from "@/components/home/BrandBar";
 import CategoryTabs from "@/components/home/CategoryTabs";
 import FeaturedSection from "@/components/home/FeaturedSection";
 import ProductCard from "@/components/home/ProductCard";
-// [Mock Phase 1: Pure UI Template]
-const productService = {
-  getAllBrands: async () => [],
-  getAllCategories: async () => [],
-  getFeaturedProducts: async (l: number) => [],
-  getProducts: async (p: any) => ({ content: [], totalPages: 1 }),
-};
-
+import { productService } from "@/services/product.service";
 import {
   BrandResponse,
   CategoryResponse,

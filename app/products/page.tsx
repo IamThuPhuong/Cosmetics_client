@@ -3,13 +3,7 @@
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import ProductCard from "@/components/home/ProductCard";
-// [Mock Phase 1: Pure UI Template]
-const productService = {
-  getAllBrands: async () => [],
-  getAllCategories: async () => [],
-  getProducts: async (p: any) => ({ content: [], totalPages: 1, totalElements: 0 }),
-};
-
+import { productService } from "@/services/product.service";
 import {
   BrandResponse,
   CategoryResponse,

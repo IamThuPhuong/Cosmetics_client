@@ -2,17 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { CartItemResponse, CartResponse, GuestCartItemRequest } from "@/types/cart";
-// [Mock Phase 1: Pure UI Template]
-const cartService = {
-  getCart: async () => null,
-  getGuestCartPreview: async () => null,
-  addToCart: async () => ({}),
-  updateItemQuantity: async () => ({}),
-  removeItem: async () => ({}),
-  clearCart: async () => ({}),
-  syncGuestCart: async () => ({}),
-};
-
+import { cartService } from "@/services/cart.service";
 import { useAuth } from "./AuthContext";
 
 interface CartContextType {

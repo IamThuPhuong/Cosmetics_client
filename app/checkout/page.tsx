@@ -5,11 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import { useAuth } from "@/context/AuthContext";
-// [Mock Phase 1: Pure UI Template]
-const orderService = {
-  createOrder: async (req: any) => ({ id: 1, orderCode: "ORD-MOCK-001" }),
-};
-
+import { orderService } from "@/services/order.service";
 import { paymentService } from "@/services/payment.service";
 import { PaymentMethod } from "@/types/order";
 import { formatVND } from "@/lib/utils";

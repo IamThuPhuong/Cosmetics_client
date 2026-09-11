@@ -4,12 +4,7 @@ import { useEffect, useState, use } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-// [Mock Phase 1: Pure UI Template]
-const orderService = {
-  getOrderDetail: async (id: any) => null,
-  cancelOrder: async (id: any) => ({}),
-};
-
+import { orderService } from "@/services/order.service";
 import { OrderResponse } from "@/types/order";
 import {
   formatVND,

@@ -5,11 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
-// [Mock Phase 1: Pure UI Template]
-const orderService = {
-  getMyOrders: async (p: any) => ({ content: [], totalPages: 1 }),
-};
-
+import { orderService } from "@/services/order.service";
 import { OrderSummaryResponse, OrderStatus } from "@/types/order";
 import {
   formatVND,

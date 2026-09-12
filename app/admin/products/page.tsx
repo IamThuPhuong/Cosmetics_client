@@ -2,14 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
-// [Mock Phase 1: Pure UI Template]
-const adminService = {
-  getAdminProducts: async (p: any) => ({ content: [], totalPages: 1 }),
-  createProduct: async (d: any) => ({}),
-  updateProduct: async (id: any, d: any) => ({}),
-  updateProductStatus: async (id: any, s: any) => ({}),
-};
-
+import { adminService } from "@/services/admin.service";
 import { productService } from "@/services/product.service";
 import {
   ProductSummaryResponse,

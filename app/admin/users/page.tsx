@@ -1,12 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-// [Mock Phase 1: Pure UI Template]
-const adminService = {
-  getAdminUsers: async (p: any) => ({ content: [], totalPages: 1 }),
-  updateUserStatus: async (id: any, s: any) => ({}),
-};
-
+import { adminService } from "@/services/admin.service";
 import { UserResponse, UserFilterParams, Role, UserStatus } from "@/types/auth";
 import { formatDate } from "@/lib/utils";
 import {

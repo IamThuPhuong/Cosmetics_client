@@ -3,14 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// [Mock Phase 1: Pure UI Template]
-const adminService = {
-  getDashboardStatistics: async () => null,
-  getRevenueChart: async () => null,
-  getCategoryRevenue: async () => [],
-  getTopSellingProducts: async () => [],
-};
-
+import { adminService } from "@/services/admin.service";
 import {
   DashboardSummaryResponse,
   RevenueStatisticsResponse,

@@ -4,12 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { productService } from "@/services/product.service";
-// [Mock Phase 1: Pure UI Template]
-const adminService = {
-  getAdminProducts: async (p: any) => ({ content: [] }),
-  createPosOrder: async (d: any) => ({ id: 1, orderCode: "POS-001" }),
-};
-
+import { adminService } from "@/services/admin.service";
 import { ProductSummaryResponse, ProductResponse } from "@/types/product";
 import { AdminOrderItemRequest, PaymentMethod } from "@/types/order";
 import { formatVND } from "@/lib/utils";
